@@ -12,3 +12,5 @@
 /spring/spring-factory/target/
 /spring/spring-resources/target/
 /spring/spring-validation/target/
+.idea/
+*.iml
