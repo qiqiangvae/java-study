@@ -1,0 +1,14 @@
+# Project exclude paths
+/concurrency/target/
+/design-pattern/target/
+/io/target/
+/jdk8-study/target/
+/jdk9-study/target/
+/jdk10-study/target/
+/jdk11-study/target/
+/jdk14-study/target/
+/jvm/target/
+/netty/target/
+/spring/spring-factory/target/
+/spring/spring-resources/target/
+/spring/spring-validation/target/
