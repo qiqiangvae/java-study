@@ -14,8 +14,8 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class ConditionExample {
     private static final Lock LOCK = new ReentrantLock();
-    private static final Condition EMPTY = LOCK.newCondition();
-    private static final Condition FULL = LOCK.newCondition();
+    private static final Condition NOT_EMPTY = LOCK.newCondition();
+    private static final Condition NOT_FULL = LOCK.newCondition();
     private static final int CAPACITY = 10;
     private static final LinkedList<Object> LIST = new LinkedList<>();
 
@@ -34,13 +34,16 @@ public class ConditionExample {
             while (true) {
                 LOCK.lock();
                 try {
-                    while (CAPACITY <= LIST.size()) {
+                    /*
+                     * 如果仓库满了，就等到仓库不满，加上自旋保证多个生产者存在时能正常工作
+                     */
+                    while (CAPACITY == LIST.size()) {
                         System.out.println("仓库满了，等待消费");
-                        FULL.await();
+                        NOT_FULL.await();
                     }
                     LIST.add(new Object());
                     System.out.println("新增一个元素，还剩" + LIST.size());
-                    EMPTY.signalAll();
+                    NOT_EMPTY.signalAll();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
@@ -70,11 +73,11 @@ public class ConditionExample {
                 try {
                     while (LIST.size() == 0) {
                         System.out.println("仓库空了，等待生产元素");
-                        EMPTY.await();
+                        NOT_EMPTY.await();
                     }
                     LIST.removeFirst();
                     System.out.println(name + "取出一个元素，还剩" + LIST.size());
-                    FULL.signalAll();
+                    NOT_FULL.signalAll();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {

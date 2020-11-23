@@ -9,18 +9,17 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>jdk8-study</module>
-        <module>jdk9-study</module>
-        <module>jdk10-study</module>
-        <module>jdk11-study</module>
-        <module>jdk14-study</module>
         <module>jvm</module>
         <module>spring</module>
         <module>design-pattern</module>
         <module>swing</module>
         <module>netty</module>
-        <module>io</module>
         <module>concurrency</module>
+        <module>mq</module>
+        <module>java-high-ranking</module>
+        <module>arithmetic</module>
+        <module>dubbo</module>
+        <module>jdk</module>
     </modules>
 
 

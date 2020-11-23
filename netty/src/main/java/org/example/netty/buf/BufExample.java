@@ -16,7 +16,12 @@ public class BufExample {
             byteBuf.writeByte(i);
         }
         BufUtils.print(byteBuf);
-        byte[] array = byteBuf.array();
+        byteBuf.array();
+        BufUtils.print(byteBuf);
+        int readerIndex = byteBuf.readerIndex();
+        byteBuf.readByte();
+        BufUtils.print(byteBuf);
+        byteBuf.readerIndex(readerIndex);
         BufUtils.print(byteBuf);
     }
 }

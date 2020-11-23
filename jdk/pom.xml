@@ -9,20 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>concurrency</artifactId>
+    <artifactId>jdk</artifactId>
+    <packaging>pom</packaging>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
+    <modules>
+        <module>jdk8-study</module>
+        <module>jdk9-study</module>
+        <module>jdk10-study</module>
+        <module>jdk11-study</module>
+        <module>jdk14-study</module>
+    </modules>
 </project>

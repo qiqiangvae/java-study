@@ -11,12 +11,12 @@ import java.util.concurrent.Executors;
  */
 public class CyclicBarrierExample {
     public static void main(String[] args) {
-        CyclicBarrier cyclicBarrier = new CyclicBarrier(6, () -> System.out.println("所有人都准备号了，起跑！"));
+        CyclicBarrier cyclicBarrier = new CyclicBarrier(6, () -> System.out.println(Thread.currentThread().getName() + "人满了，发车！"));
         ExecutorService executorService = Executors.newFixedThreadPool(10);
         for (int i = 0; i < 10000; i++) {
             final int number = i;
             executorService.execute(() -> {
-                System.out.println("我是" + number + "号,我准备好了");
+                System.out.println("第" + number + "号乘客上车了");
                 try {
                     cyclicBarrier.await();
                 } catch (InterruptedException | BrokenBarrierException e) {

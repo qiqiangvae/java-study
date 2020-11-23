@@ -15,6 +15,7 @@
         <module>spring-resources</module>
         <module>spring-validation</module>
         <module>spring-factory</module>
+        <module>spring-event</module>
     </modules>
 
     <build>

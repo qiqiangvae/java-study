@@ -15,18 +15,15 @@ public class SemaphoreExample {
         ExecutorService executorService = Executors.newFixedThreadPool(5);
         for (int i = 0; i < 100; i++) {
             final int number = i;
-            executorService.execute(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        semaphore.acquire();
-                        System.out.println(number + "在执行任务！");
-                        Thread.sleep(100);
-                        semaphore.release();
-                        System.out.println(number + "任务执行完毕！");
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+            executorService.execute(() -> {
+                try {
+                    semaphore.acquire();
+                    System.out.println(number + "在执行任务！");
+                    Thread.sleep(100);
+                    semaphore.release();
+                    System.out.println(number + "任务执行完毕！");
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             });
         }

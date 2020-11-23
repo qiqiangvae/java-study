@@ -37,13 +37,12 @@ public class WaitAndNotifyExample {
                         LIST.notifyAll();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
-                    } finally {
-                        try {
-                            Thread.sleep(random.nextInt(500));
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
                     }
+                }
+                try {
+                    Thread.sleep(random.nextInt(500));
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             }
         }
@@ -57,7 +56,7 @@ public class WaitAndNotifyExample {
             while (true) {
                 synchronized (LIST) {
                     try {
-                        //仓库满了
+                        //仓库空了
                         while (LIST.size() == 0) {
                             System.out.println("仓库空了，等待生产");
                             LIST.wait();
@@ -67,13 +66,12 @@ public class WaitAndNotifyExample {
                         LIST.notifyAll();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
-                    }finally {
-                        try {
-                            Thread.sleep(random.nextInt(500));
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
                     }
+                }
+                try {
+                    Thread.sleep(random.nextInt(500));
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             }
         }

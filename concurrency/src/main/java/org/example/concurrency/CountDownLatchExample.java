@@ -9,10 +9,12 @@ import java.util.concurrent.Executors;
  * @date 2020-10-26 5:20 下午
  */
 public class CountDownLatchExample {
+    static final int COUNT = 10;
+
     public static void main(String[] args) throws InterruptedException {
-        CountDownLatch countDownLatch = new CountDownLatch(10000);
+        CountDownLatch countDownLatch = new CountDownLatch(COUNT);
         ExecutorService executorService = Executors.newFixedThreadPool(5);
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < COUNT; i++) {
             int number = i;
             executorService.execute(() -> {
                 System.out.println("选手" + number + "准备好了!");

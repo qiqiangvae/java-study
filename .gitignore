@@ -14,3 +14,5 @@
 /spring/spring-validation/target/
 .idea/
 *.iml
+**/target
+*.txt
