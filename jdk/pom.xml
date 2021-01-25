@@ -18,5 +18,6 @@
         <module>jdk10-study</module>
         <module>jdk11-study</module>
         <module>jdk14-study</module>
+        <module>myjdk14</module>
     </modules>
 </project>

@@ -20,7 +20,7 @@ public class ParameterExample {
     public void f1(String p1, Integer p2) {
 
     }
-    public void f2(String nam, Integer age) {
+    public void f2(String name, Integer age) {
 
     }
 }

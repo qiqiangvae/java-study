@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root name="hello">
+    <request>
+        <header>
+            <msgId>f19d9e4b-cd9c-471b-bccb-2a3ba76f3f6a</msgId>
+            <action>query</action>
+            <sendTime>2017-03-08 09:25:06</sendTime>
+            <pageSum>页面总数</pageSum>
+            <records>数据条数</records>
+            <pageSize>每页条数</pageSize>
+            <pageNum>当前页数</pageNum>
+        </header>
+        <body>
+            <dataList>
+                <data>
+                    <PIX_CODE>主索引号</PIX_CODE>
+                    <XM>姓名</XM>
+                    <XB>性别</XB>
+                    <ZJLX>证件类型</ZJLX>
+                    <ZJHM>证件号码</ZJHM>
+                    <LXDH>联系电话</LXDH>
+                    <CSRQ>出生日期</CSRQ>
+                    <HYZK>婚姻状况</HYZK>
+                    <HJDDM>婚姻状况</HJDDM>
+                </data>
+                <data>
+                    <PIX_CODE>主索引号</PIX_CODE>
+                    <XM>姓名</XM>
+                    <XB>性别</XB>
+                    <ZJLX>证件类型</ZJLX>
+                    <ZJHM>证件号码</ZJHM>
+                    <LXDH>联系电话</LXDH>
+                    <CSRQ>出生日期</CSRQ>
+                    <HYZK>婚姻状况</HYZK>
+                    <HJDDM>婚姻状况</HJDDM>
+                </data>
+            </dataList>
+        </body>
+    </request>
+</root>

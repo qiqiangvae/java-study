@@ -20,6 +20,8 @@
         <module>arithmetic</module>
         <module>dubbo</module>
         <module>jdk</module>
+        <module>mybatis</module>
+        <module>java-web</module>
     </modules>
 
 

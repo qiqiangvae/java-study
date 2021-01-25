@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: dubbo-consumer
+
+dubbo:
+  registry:
+    address: zookeeper://mycloud:2181
+server:
+  port: 8082
