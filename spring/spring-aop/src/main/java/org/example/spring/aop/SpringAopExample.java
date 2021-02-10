@@ -3,7 +3,6 @@ package org.example.spring.aop;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import java.io.IOException;
 
@@ -12,7 +11,6 @@ import java.io.IOException;
  */
 @Configuration
 @ComponentScan(basePackageClasses = AopConfig.class)
-@EnableAspectJAutoProxy
 public class SpringAopExample {
 
     public static void main(String[] args) throws IOException {

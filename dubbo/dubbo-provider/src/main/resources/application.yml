@@ -6,7 +6,7 @@ dubbo:
     # 配置扫描包，路径是提供服务的实现类所在包
     base-packages: org.example.dubbo.provider.api
   registry:
-    address: zookeeper://116.85.33.111:2181
+    address: zookeeper://localhost:2181
     timeout: 15000
   protocols:
     dubbo:

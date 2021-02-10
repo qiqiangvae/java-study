@@ -19,6 +19,7 @@
         <module>spring-small-tools</module>
         <module>spring-security</module>
         <module>spring-aop</module>
+        <module>spring-shell</module>
     </modules>
 
     <build>
